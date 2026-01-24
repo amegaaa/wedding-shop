@@ -10,6 +10,15 @@ body {
   color: vars.$color-accent;
 }
 
+.promo {
+  padding: 7px 0 9px;
+  background-color: vars.$bg-primary;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 11px;
+  color: vars.$color-primary;
+}
+
 .header {
   padding: 20px 0 40px;
   text-transform: uppercase;
@@ -143,5 +152,106 @@ body {
       left: -21px;
     }
 
+  }
+}
+
+.top {
+  min-height: 90vh;
+  
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
+  
+  &__content {
+    padding: 115px 0 50px;
+    max-width: 446px;
+    margin-right: 134px;
+  }
+
+  &__title {
+    @extend %lora-400;
+    font-size: 80px;
+    margin-bottom: 60px;
+    line-height: 1.2;
+  }
+
+  &__link {
+    display: inline-block;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: vars.$color-accent;
+    padding: 12px 38px;
+    border-radius: 3px;
+  }
+}
+
+.new-collection {
+  background-image: url(../images/new-collection-decor.svg);
+  background-repeat: no-repeat;
+  background-position: 233px -39%;
+  &__inner {
+    padding: 150px 0;
+    display: flex;
+  }
+
+  &__content {
+    padding: 75px 40px 0 40px;
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin-bottom: 50px;
+    font-size: 45px;
+    @extend %lora-400;
+  }
+
+  &__text {
+    color: vars.$color-text-muted;
+  }
+
+  &__text + .new-collection__text {
+    margin-top: 25px;
+  }
+
+  &__btn {
+    display: inline-block;
+    font-size: 16px;
+    color: vars.$color-text-muted;
+    border: 1px solid vars.$bg-primary;
+    padding: 10px 65px;
+    margin-top: auto;
+    align-self: flex-start;
+  }
+
+  &__img {
+    margin-top: 75px;
+  }
+
+  &__box {
+    position: relative;
+    padding-left: 40px;
+    padding-right: 40px;
+    display: flex;
+  }
+
+  &__box-img {
+    position: absolute;
+    top: 0;
+    left: -75px;
+    max-width: fit-content;
+  }
+
+  &__caption {
+    width: 290px;
+    margin-top: auto;
+    margin-bottom: 40px;
+    color: vars.$color-text-muted;
   }
 }
