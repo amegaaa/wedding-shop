@@ -1,7 +1,7 @@
-@use 'reset';
-@use 'vars';
-@use 'fonts';
-@use 'global';
+@use "reset";
+@use "vars";
+@use "fonts";
+@use "global";
 
 body {
   @extend %opensans-400;
@@ -33,7 +33,7 @@ body {
   &__logo {
     width: 100%;
     text-align: center;
-    margin-bottom: 15px; 
+    margin-bottom: 15px;
   }
   &__lang {
     display: flex;
@@ -147,17 +147,16 @@ body {
   &__bottom-item + .footer__bottom-item {
     position: relative;
     &::before {
-      content: '|';
+      content: "|";
       position: absolute;
       left: -21px;
     }
-
   }
 }
 
 .top {
   min-height: 90vh;
-  
+
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -166,7 +165,7 @@ body {
     flex-direction: column;
     align-items: end;
   }
-  
+
   &__content {
     padding: 115px 0 50px;
     max-width: 446px;
@@ -253,5 +252,67 @@ body {
     margin-top: auto;
     margin-bottom: 40px;
     color: vars.$color-text-muted;
+  }
+}
+
+.join-us {
+  background-color: vars.$bg-primary;
+  &__inner {
+    display: flex;
+    gap: 40px;
+    padding: 0 40px;
+  }
+
+  &__img {
+    max-width: 540px;
+  }
+
+  &__box {
+    padding: 30px 0px;
+  }
+
+  &__title {
+    @extend %lora-400;
+    text-transform: uppercase;
+    margin-bottom: 13px;
+    font-size: 45px;
+  }
+
+  &__text {
+    @extend %lora-400;
+    font-size: 40px;
+    margin-bottom: 25px;
+  }
+
+  &__input {
+    width: 100%;
+    display: block;
+    border: none;
+    border-bottom: 1px solid vars.$color-text-muted;
+    padding-bottom: 10px;
+    @extend %opensans-400;
+    color: vars.$color-text-muted;
+    background-color: transparent;
+  }
+
+  &__input + .join-us__input {
+    margin-top: 10px;
+  }
+
+  &__btn {
+    display: block;
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    background-color: vars.$color-accent;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__form-caption {
+    font-size: 11px;
   }
 }
